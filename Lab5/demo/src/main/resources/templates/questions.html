@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Questions</title>
+    <link rel="stylesheet" type="text/css" href="/static/questions.css">
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+      }
+      .quiz-container {
+          max-width: 800px;
+          margin: 0 auto;
+      }
+      .question {
+          margin: 20px 0;
+      }
+    </style>
+
+  </head>
+  
+  <body>
+    <h1>Quiz App</h1>
+
+    <div th:if="${questions != null}" class="quiz-container">
+      <h1>Quiz</h1>
+
+      <div th:each="question, iterStat : ${questions}" class="container custom mt-sm-5 my-1">
+          <div class="question ml-sm-5 pl-sm-5 pt-2">
+              <div th:text="${question.getQuestion()}" class="py-2 h5"><b>Question [[${iterStat.index}]]</b></div>
+              <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                  <label th:each="choice : ${question.getChoices()}" class="options">
+                    <input type="radio" th:name="${'answer' + iterStat.index}" th:value="${choice}"> [[${choice}]] 
+                      <span class="checkmark"></span>
+                  </label>
+              </div>
+          </div>
+      </div>
+
+      <a href="/proxy/8099/score">
+        <button id="submit">Submit</button>
+      </a>
+
+      
+    </div>
+
+  </body>
+</html>

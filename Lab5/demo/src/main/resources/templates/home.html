@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Login Page</title>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+  </head>
+  <body>
+  <h1>Welcome To The Login Page</h1>
+  <div id="login">
+
+    <h2>Login</h2>
+
+    <!-- <form th:action="@{/proxy/8092/login}" th:object="${loginCredentials}" method="post">
+    <label for="email">Email:</label>
+    <input type="text" id="email" th:field="*{email}" required/>
+    <p class="error" th:if="${!emailok}">Invalid Email</p>
+      
+    <label for="password">Password:</label>
+    <input type="password" id="password" th:field="*{password}" required/>
+    <p class="error" th:if="${!passwordok}">Weak Password</p>
+    <br> -->
+
+    <form th:action="@{/proxy/8099/login}" th:object="${loginCredentials}" method="POST">
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" th:field="*{email}" required><br><br>
+    <p class="error" th:if="${!emailok}">Invalid Email</p>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="passwordd" th:field="*{password}" required><br><br>
+    <p class="error" th:if="${!passwordok}">Weak Password</p>
+    
+
+    <div>
+      <button type="submit">Login</button>
+    </div>
+    </form>
+    
+  </div>
+  </body>
+ 
+</html>
+

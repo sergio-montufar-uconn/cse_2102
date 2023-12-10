@@ -14,7 +14,7 @@ git clone https://github.com/sergio-montufar-uconn/cse_2102/tree/main/quiz-app.g
 
 ## Check directory
 
-Make sure that you are in the correct directory. Navigate to Lab 0 with `cd cse_2102/quiz-app` in the terminal.
+Make sure that you are in the correct directory. Navigate to this lab with `cd cse_2102/quiz-app` in the terminal.
 
 ## Run the unit tests
 

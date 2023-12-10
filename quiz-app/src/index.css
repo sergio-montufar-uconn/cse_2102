@@ -1,0 +1,30 @@
+body {
+    background-color: #ff0000;
+    color: rgb(171, 171, 227);
+    font-size: 18px;
+    animation: changeColors 60s infinite linear;
+}
+
+@keyframes changeColors {
+    0% {
+        background-color: #ffcccc; /* Light pink */
+    }
+    16.666% {
+        background-color: #ffd9b3; /* Light orange */
+    }
+    33.333% {
+        background-color: #ffffcc; /* Light yellow */
+    }
+    50% {
+        background-color: #ccffcc; /* Light green */
+    }
+    66.666% {
+        background-color: #cce6ff; /* Light blue */
+    }
+    83.333% {
+        background-color: #e6ccff; /* Light purple */
+    }
+    100% {
+        background-color: #ffccff; /* Light lavender */
+    }
+}

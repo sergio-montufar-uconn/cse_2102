@@ -122,7 +122,7 @@ const Quiz = () => {
     };
 
     return (
-        <div style={quizPageStyle}>
+        <div id="question-div" style={quizPageStyle}>
             <h2>
             Question: {question + 1} out of {myQuestions.length}
             </h2>

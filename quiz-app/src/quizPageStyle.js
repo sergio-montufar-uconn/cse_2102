@@ -1,6 +1,6 @@
 const quizPageStyle = {
     color: "white",
-    backgroundColor: "Grey",
+    backgroundColor: "grey",
     padding: "10px",
     fontFamily: "Sans-Serif",
     opacity: 0.75
